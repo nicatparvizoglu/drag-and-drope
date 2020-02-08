@@ -1,0 +1,36 @@
+.dragArea{
+    padding: 50px;
+    box-shadow: inset 0 0 20px 5px rgb(148, 145, 145);
+    .drag-content{
+        border: 1px dashed brown;
+        padding:45px;
+        text-align:center ;
+        font-size: 1.6em;
+        p{
+            transition: .3s;
+        }
+        i{
+            pointer-events: none;
+            animation: iani 1s infinite linear;
+           display: none;
+        }
+        &.active{
+            background:rgb(86, 90, 79);
+            color: #fff;
+            i{
+                display: block;
+            }
+            p{
+                transform: translateY(-20px);
+            }
+        }
+    }
+}
+@keyframes iani{
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}

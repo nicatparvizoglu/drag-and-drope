@@ -1,0 +1,61 @@
+.dragArea {
+  padding: 50px;
+  -webkit-box-shadow: inset 0 0 20px 5px #949191;
+          box-shadow: inset 0 0 20px 5px #949191;
+}
+
+.dragArea .drag-content {
+  border: 1px dashed brown;
+  padding: 45px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.dragArea .drag-content p {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.dragArea .drag-content i {
+  pointer-events: none;
+  -webkit-animation: iani 1s infinite linear;
+          animation: iani 1s infinite linear;
+  display: none;
+}
+
+.dragArea .drag-content.active {
+  background: #565a4f;
+  color: #fff;
+}
+
+.dragArea .drag-content.active i {
+  display: block;
+}
+
+.dragArea .drag-content.active p {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+@-webkit-keyframes iani {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes iani {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
